@@ -1,11 +1,12 @@
 import java.math.*;
 
-class CalPayroll
+class CalPayroll2
 {
     public void acceptPay()
     {
       Screen scr1 = new Screen();
       Accept acc1 = new Accept();
+      Assign2 as1 = new Assign2();
       
       System.out.println("Payroll Computation\n");
       System.out.print("Enter number of hours worked or type '-1' to exit: ");

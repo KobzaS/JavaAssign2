@@ -3,22 +3,28 @@ class Assign2
 
    public static void main(String[] args)
    {
-      CalPayroll cal = new CalPayroll();
+      CalPayroll2 cal = new CalPayroll2();
       Accept ac1 = new Accept();
       Screen sc1 = new Screen();
+      boolean ext = false;
       
-      cal.acceptPay();  
+      cal.acceptPay(); 
       
-      System.out.print("Press 'e' to exit or any other leter + Enter to continue: ");
-      char choice = ac1.AcceptInputChar();
-      if (choice == 'e' || choice == 'E')
+      while(ext == false)
       {
-         System.exit(0);
+         System.out.print("Press 'e' to exit or any other leter + Enter to continue: ");
+         char choice = ac1.AcceptInputChar();
+         
+         if (choice == 'e' || choice == 'E')
+         {
+            ext = true;
+         }
+         else
+         {
+            sc1.scrollScreen(45);
+            cal.acceptPay();
+         }
       }
-      else
-      {
-         sc1.scrollScreen(45);
-         cal.acceptPay();
-      }
+      System.exit(0);
    }
 }
