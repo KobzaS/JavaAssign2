@@ -4,10 +4,14 @@ class Payroll extends Pay
     public double calc_PayRoll()
     {
         grossPay = super.calc_PayRoll();
+        System.out.println(grossPay+ " afsdagf");
+        grossPay = 400;
 
-        tax = tax();
+        tax = tax(grossPay);
 
-        tax += 1;
+        System.out.println(tax);
+
+        tax = 1 - tax;
 
         netPay = grossPay * tax;
 

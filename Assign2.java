@@ -3,7 +3,7 @@ class Assign2
 
    public static void main(String[] args)
    {
-      CalPayroll2 cal = new CalPayroll2();
+      CalPayroll cal = new CalPayroll();
       Accept ac1 = new Accept();
       Screen sc1 = new Screen();
       boolean ext = false;
